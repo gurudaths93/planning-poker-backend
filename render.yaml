@@ -5,7 +5,6 @@
       "type": "web",
       "name": "planning-poker-backend",
       "runtime": "node",
-      "rootDir": "./backend",
       "buildCommand": "npm install",
       "startCommand": "npm start",
       "plan": "free",
