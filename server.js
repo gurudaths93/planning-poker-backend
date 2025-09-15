@@ -10,17 +10,12 @@ const server = http.createServer(app);
 // Configure CORS for Socket.IO
 const io = socketIo(server, {
   cors: {
-    origin: [
-      "http://localhost:4200",
-      "https://pages.github.boschdevcloud.com",
-      "https://*.github.io",
-      "https://*.vercel.app",
-      "https://*.netlify.app"
-    ],
+    origin: "*", // Allow all origins for now
     methods: ["GET", "POST"],
     allowedHeaders: ["*"],
-    credentials: true
-  }
+    credentials: false
+  },
+  allowEIO3: true // Enable compatibility with older clients
 });
 
 // Express middleware
