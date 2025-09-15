@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/render-oss/render-build-action/main/schema/v2.json",
+  "services": [
+    {
+      "type": "web",
+      "name": "planning-poker-backend",
+      "runtime": "node",
+      "rootDir": "./backend",
+      "buildCommand": "npm install",
+      "startCommand": "npm start",
+      "plan": "free",
+      "region": "oregon",
+      "envVars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ]
+}
